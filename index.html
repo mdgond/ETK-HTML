@@ -4,20 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ETK-HTML</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Title of the ETK-HTML website -->
     <div class="title">
-      <div class="logo">
-        <img src="ETK.png" alt="ETK Logo" class="etk-logo" />
+      <!-- Left section -->
+      <div class="left-section">
+        <div class="logo">
+          <img src="Logo.png" alt="ETK Logo" class="etk-logo" />
+        </div>
+        <div class="etk-text">Educational & Technical Knowledge</div>
       </div>
-      <nav>
+      
+      <!-- nav -->
+       <nav>
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Courses</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
         </ul>
       </nav>
+
+      <!-- authorization -->
+       <div class="auth-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="signup.html" class="signup-btn">Sign Up</a>
+      </div>
     </div>
 
     <!-- Header of the ETK-HTML website -->
@@ -43,5 +56,105 @@
         <li><a href="#div">Divisions</a></li>
       </ul>
     </nav>
+
+    <!-- HTML Intro -->
+    <section id="introduction">
+      <h2>Introduction to HTML</h2>
+      <p>
+        HTML (HyperText Markup Language) is the standard markup language for
+        creating web pages and web applications. It provides the structure of a
+        webpage, allowing you to define elements such as headings, paragraphs,
+        links, images, and more. HTML uses tags to describe the content and
+        layout of a webpage.
+      </p>
+    </section>
+
+    <!-- Structure of HTML -->
+    <section id="structure">
+      <h2>Structure of HTML</h2>
+      <div class="html-structure">
+        <pre>
+          &lt;!doctype html&gt;
+          &lt;html&gt;
+            &lt;head&gt;
+              &lt;title&gt; Document &lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;h1&gt;Heading&lt;/h1&gt;
+              &lt;p&gt;Paragraph&lt;/p&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </pre>
+      </div>
+    </section>
+
+    <!-- Example of HTML structure -->
+    <section id="example">
+      <h2>Example of HTML Structure</h2>
+      <div class="html-example">
+        <pre>
+          &lt;!doctype html&gt;
+          &lt;html&gt;
+            &lt;head&gt;
+              &lt;title&gt; My First Webpage &lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;h1&gt;Welcome to My Webpage&lt;/h1&gt;
+              &lt;p&gt;This is a simple webpage created using HTML.&lt;/p&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </pre>
+      </div>
+    </section>
+
+    <!-- Assignments -->
+    <section id="assignments">
+      <h2>5 Assignments</h2>
+      <ol>
+        <li>Write down the HTML structure on paper by your own.</li>
+        <li>
+          Create a simple webpage with headings of 5 Cities of Uttar Pradesh and
+          2 lines about the city in paragraph tag.
+        </li>
+        <li>
+          Create a webpage of 5 Tourist Places of Prayagraj and describe each
+          place in a paragraph tag.
+        </li>
+        <li>
+          Create a webpage with 5 Indian Games and defines each game in a
+          paragraph tag.
+        </li>
+        <li>
+          Create a computer notes webpage with headings and paragraphs. You will
+          covering Input and Output devices with definitions.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="address">
+        <p>
+          <ul>
+            <li>In opposite of Chhappan Bhog</li>
+            <li>Educational & Technical Institute</li>
+            <li>Saidpur Rd</li>
+            <li>Chahaniya, Chandauli</li>
+            <li>Uttar Pradesh - 232109</li>
+          </ul>
+        </p>
+      </div>
+      <div class="contact">
+        <ul>
+          <li>Phone: 6386811744</li>
+          <li>Email: et.knowledge11@gmail.com</li>
+          <li>Website: www.etkknowledge.com</li>
+        </ul>
+      </div>
+      <div class="rights">
+        <p>&copy; 2024 ETK-HTML. All rights reserved.</p>
+        
+      </div>
+    </footer>
   </body>
 </html>
