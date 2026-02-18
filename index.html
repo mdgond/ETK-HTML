@@ -7,31 +7,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Title of the ETK-HTML website -->
-    <div class="title">
-      <!-- Left section -->
+    <!-- ===== HEADER CONTAINER ===== -->
+
+    <div class="header-container">
+
+      <!-- Left Section -->
       <div class="left-section">
-        <div class="logo">
-          <img src="Logo.png" alt="ETK Logo" class="etk-logo" />
-        </div>
-        <div class="etk-text">Educational & Technical Knowledge</div>
+        <img src="Logo.png" alt="ETK Logo" class="logo" />
+        <div class="etk-title">Educational & Technical Knowledge</div>
       </div>
-      
-      <!-- nav -->
-       <nav>
-        <ul class="nav-links">
+
+      <!-- Navigation -->
+      <nav class="mobile-menu">
+        <ul class="nav">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#courses">Courses</a></li>
         </ul>
       </nav>
 
-      <!-- authorization -->
-       <div class="auth-buttons">
+      <!-- Buttons -->
+      <div class="auth-buttons">
         <a href="login.html" class="login-btn">Login</a>
-        <a href="signup.html" class="signup-btn">Sign Up</a>
+        <a href="signup.html" class="signup-btn">SignUp</a>
       </div>
+
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
+
+
+
+
+
 
     <!-- Header of the ETK-HTML website -->
     <header class="header">
@@ -157,4 +170,15 @@
       </div>
     </footer>
   </body>
+
+  <!-- JAVASCRIPT -->
+  <script>
+  const hamburger = document.querySelector(".hamburger");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+  });
+</script>
 </html>
