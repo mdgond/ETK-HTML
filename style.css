@@ -1,11 +1,19 @@
+:root {
+	--primary: #800000; /* Maroon */
+	--primary-light: #a00000;
+	--primary-dark: #5c0000;
+	--white: #ffffff;
+	--text-dark: #1f1f1f;
+}
+
 /* =============================
   1. RESET
 ============================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* =============================
@@ -13,7 +21,7 @@
 ============================= */
 
 body {
-  font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 /* =============================
@@ -21,14 +29,14 @@ body {
 ============================= */
 
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 3rem;
-  position: sticky;
-  top: 0;
-  background: white;
-  z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 3rem;
+	position: sticky;
+	top: 0;
+	background: var(--white);
+	z-index: 1000;
 }
 
 /* =============================
@@ -36,64 +44,62 @@ body {
 ============================= */
 
 .left-section {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
 
 .logo {
-  height: 3rem;
-  display: block;
+	height: 3rem;
+	display: block;
 }
 
 .etk-title {
-  font-family: 'merriweather', serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.03125rem;
-  color: #c60808;
+	font-family: 'merriweather', serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0.03125rem;
+	color: var(--primary);
 }
 
 /* =============================
   5. NAVIGATION
 ============================= */
 
-.nav {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+.title-nav {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
 }
 
-.nav a {
-  text-decoration: none;
-  color: #8b0000;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  padding: 1rem 0;
-  position: relative;
-  transition: color 0.3s ease-in;
+.title-nav a {
+	text-decoration: none;
+	color: var(--primary-dark);
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: center;
+	padding: 1rem 0;
+	position: relative;
+	transition: color 0.3s ease-in;
 }
 
-.nav a:hover {
-  color: #c60808;
+.title-nav a:hover {
+	color: var(--primary);
 }
 
-.nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 3px;
-  background-color: #c60808;
-  transition: width 0.3s ease;
+.title-nav a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0%;
+	height: 3px;
+	background-color: var(--primary);
+	transition: width 0.3s ease;
 }
 
-.nav a:hover::after {
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
+.title-nav a:hover::after {
+	width: 100%;
 }
 
 /* =============================
@@ -101,118 +107,224 @@ body {
 ============================= */
 
 .auth-buttons {
-  display: flex;
-  gap: 1rem;
+	display: flex;
+	gap: 1rem;
 }
 
-.login-btn,
+/* .login-btn,
 .signup-btn {
-  padding: 0.625rem 1.25rem;
-  border-radius: 0.4rem;
-  background-color: #c60808;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
+	padding: 0.625rem 1.25rem;
+	border-radius: 0.4rem;
+	background-color: #c60808;
+	color: #fff;
+	font-weight: 600;
+	text-decoration: none;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease,
+		background-color 0.2s ease;
 }
 
 .login-btn:hover,
 .signup-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+} */
+
+.login-btn {
+	padding: 0.625rem 1.25rem;
+	border-radius: 6px;
+	border: 2px solid var(--primary);
+	color: var(--primary);
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
-/* ===== MEDIA QUERY RESPONSIVE ===== */
+.login-btn:hover {
+	background: var(--primary);
+	color: var(--white);
+}
+
+.signup-btn {
+	padding: 0.625rem 1.25rem;
+	border-radius: 6px;
+	background: var(--primary);
+	color: var(--white);
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+	background: var(--primary-dark);
+	transform: translateY(-2px);
+}
+
+/* ===== MEDIA QUERY HEADER ===== */
 
 @media (max-width: 768px) {
-  .header-container {
-    padding: 1rem 1.5rem;
-  }
+	.header-container {
+		padding: 1rem 1.5rem;
+	}
 
-  .auth-buttons {
-    display: none;
-  }
+	.auth-buttons {
+		display: none;
+	}
 
-  .etk-title {
-    font-size: 1.2rem;
-  }
+	.etk-title {
+		font-size: 1.2rem;
+	}
 
-  .logo {
-    height: 2.5rem;
-  }
+	.logo {
+		height: 2.5rem;
+	}
 }
-
 
 /* =============================
   HAMBURGER
 ============================= */
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 0.3rem;
-  cursor: pointer;
+.title-hamburger {
+	display: none;
+	flex-direction: column;
+	gap: 0.3rem;
+	cursor: pointer;
 }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #c60808;
-  border-radius: 2px;
+.title-hamburger span {
+	width: 25px;
+	height: 3px;
+	background-color: var(--primary-light);
+	border-radius: 2px;
 }
 
 @media (max-width: 768px) {
+	.mobile-menu {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		height: 100vh;
+		width: 200px;
+		background-color: var(--white);
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 5rem 2rem;
+		gap: 2rem;
+		transition: right 0.3s ease;
+		box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+	}
 
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 200px;
-    background-color: #fff;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 5rem 2rem;
-    gap: 2rem;
-    transition: right 0.3s ease;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  }
+	.mobile-menu.active {
+		right: 0;
+	}
 
-  .mobile-menu.active {
-    right: 0;
-  }
-  
-  .nav {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+	.nav {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
 
-  .auth-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
+	.auth-buttons {
+		flex-direction: column;
+		gap: 1rem;
+	}
 
-  .hamburger {
-    display: flex;
-  }
+	.title-hamburger {
+		display: flex;
+	}
 
-  .hamburger {
-    display: flex;
-  }
+	.title-hamburger {
+		display: flex;
+	}
 }
 
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+.title-hamburger.active span:nth-child(1) {
+	transform: rotate(45deg) translate(5px, 5px);
 }
 
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
+.title-hamburger.active span:nth-child(2) {
+	opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+.title-hamburger.active span:nth-child(3) {
+	transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* =============================
+  COURSE NAVIGATION MENU
+============================= */
+
+.course-nav{
+	position: sticky;
+	top: 80px;
+	z-index: 900;
+}
+
+.course-menu {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+	padding: 0.75rem 3rem;
+	overflow-x: auto;
+	white-space: nowrap;
+	scrollbar-width: auto;
+	scroll-behavior: smooth;
+}
+
+.course-menu::-webkit-scrollbar {
+	display: none;
+}
+
+.course-menu{
+	scrollbar-width: none;
+}
+
+.course-nav {
+background: #fafafa;
+border-top: 1px solid rgba(0, 0, 0, 0.05);
+border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.course-menu a {
+	text-decoration: none;
+	color: var(--primary-light);
+	font-weight: 500;
+	font-size: 0.95rem;
+	padding-bottom: 4px;
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+/* Underline Animation */
+.course-menu a::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	width: 0%;
+	height: 1.5px;
+	background-color: var(--primary);
+	transition: width 0.3s ease;
+}
+
+.course-menu a:hover{
+	color: var(--text-dark);
+}
+
+.course-menu a:hover::after{
+	width: 100%;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px) {
+	.course-menu{
+		padding: 0.75rem 1.5rem;
+		gap: 1.5rem;
+	}
+
+	.course-menu a{
+		font-size: 0.9rem;
+	}
 }

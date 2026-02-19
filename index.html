@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ETK-HTML</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- ===== HEADER CONTAINER ===== -->
+    <!-- ===== HEADER SECTION ===== -->
 
     <div class="header-container">
 
@@ -19,10 +20,13 @@
 
       <!-- Navigation -->
       <nav class="mobile-menu">
-        <ul class="nav">
+        <ul class="title-nav">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#students">Students</a></li>
           <li><a href="#courses">Courses</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#tutorials">Tutorials</a></li>
         </ul>
       </nav>
 
@@ -33,7 +37,7 @@
       </div>
 
       <!-- Hamburger -->
-      <div class="hamburger">
+      <div class="title-hamburger">
         <span></span>
         <span></span>
         <span></span>
@@ -41,32 +45,29 @@
 
     </div>
 
+    <!-- ===== NAVIGATION SECTION ===== -->
 
-
-
-
-
-    <!-- Header of the ETK-HTML website -->
-    <header class="header">
-      <h1>HTML Documentation</h1>
-    </header>
-
-    <!-- Navigations for the HTML content -->
-    <nav>
-      <ul class="content-nav">
-        <li><a href="#introduction">HTML Intro</a></li>
-        <li><a href="#elements">HTML Basic Elements</a></li>
-        <li><a href="#links">Links</a></li>
-        <li><a href="#image">Image</a></li>
-        <li><a href="#o-list">Ordered List</a></li>
-        <li><a href="#u-list">Unordered List</a></li>
-        <li><a href="#tables">Tables</a></li>
-        <li><a href="#forms">Forms</a></li>
-        <li><a href="#frames">Frames</a></li>
-        <li><a href="#audio">Audio</a></li>
-        <li><a href="#video">Video</a></li>
-        <li><a href="#iframe">Iframe</a></li>
-        <li><a href="#div">Divisions</a></li>
+    <nav class="course-nav">
+      <ul class="course-menu">
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li><a href="#javascript">JavaScript</a></li>
+        <li><a href="#mongoDB">MongoDB</a></li>
+        <li><a href="#express">ExpressJS</a></li>
+        <li><a href="#react">ReactJS</a></li>
+        <li><a href="#node">NodeJS</a></li>
+        <li><a href="#vue">VueJS</a></li>
+        <li><a href="#angularjs">AngularJS</a></li>
+        <li><a href="#angular">Angular</a></li>
+        <li><a href="#c-lang">C</a></li>
+        <li><a href="#c++">C++</a></li>
+        <li><a href="#python">Python</a></li>
+        <li><a href="#java">Java</a></li>
+        <li><a href="#sql">SQL</a></li>
+        <li><a href="#php">PHP</a></li>
+        <li><a href="#django">Django</a></li>
+        <li><a href="#git">Git</a></li>
+        <li><a href="#github">GitHub</a></li>
       </ul>
     </nav>
 
@@ -170,15 +171,4 @@
       </div>
     </footer>
   </body>
-
-  <!-- JAVASCRIPT -->
-  <script>
-  const hamburger = document.querySelector(".hamburger");
-  const mobileMenu = document.querySelector(".mobile-menu");
-
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    mobileMenu.classList.toggle("active");
-  });
-</script>
 </html>
