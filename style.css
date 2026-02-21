@@ -4,7 +4,17 @@
 	--primary-dark: #5c0000;
 	--white: #ffffff;
 	--text-dark: #1f1f1f;
+	--light-background: #908d8d8d;
 }
+
+:root{
+	--header-height: 80px;
+	--course-height: 50px;
+}
+:root{
+	--layout-padding: 1rem;
+}
+
 
 /* =============================
   1. RESET
@@ -110,27 +120,6 @@ body {
 	display: flex;
 	gap: 1rem;
 }
-
-/* .login-btn,
-.signup-btn {
-	padding: 0.625rem 1.25rem;
-	border-radius: 0.4rem;
-	background-color: #c60808;
-	color: #fff;
-	font-weight: 600;
-	text-decoration: none;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-	transition:
-		transform 0.2s ease,
-		box-shadow 0.2s ease,
-		background-color 0.2s ease;
-}
-
-.login-btn:hover,
-.signup-btn:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-} */
 
 .login-btn {
 	padding: 0.625rem 1.25rem;
@@ -326,5 +315,112 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
 	.course-menu a{
 		font-size: 0.9rem;
+	}
+}
+
+/* =============================
+  MAIN TUTORIAL SECTION
+============================= */
+
+.tutorial-layout{
+	display: grid;
+	grid-template-columns: 16.25rem 1fr;
+	gap: 1rem;
+	padding: var(--layout-padding) 2rem;
+	background: #f7f7f7;
+	min-height: 100vh;
+	align-items: start;
+}
+
+.tutorial-sidebar{
+	position: sticky;
+	top: calc(
+		var(--header-height) + 
+		var(--course-height) + 
+		var(--layout-padding)
+	);
+	max-height: calc(
+		100vh - (
+			var(--header-height) + 
+			var(--course-height) + 
+			var(--layout-padding)
+		)
+	);
+	overflow-y: auto;
+	padding: 1rem;
+	align-self: start;
+	background: var(--white);
+	border-radius: 8px;
+}
+
+.sidebar-title{
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+	color: var(--primary-dark);
+}
+
+.topic-list{
+	list-style: none;
+}
+
+.topic-list li{
+	/* padding: 0.4rem; */
+	transition: color 0.3s ease;
+}
+
+.topic-list a{
+	display: block;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	color: var(--primary-light);
+	font-size: 0.95rem;
+}
+
+.topic-list a:hover{
+	background-color: var(--light-background);
+}
+
+/* Content Area */
+
+.tutorial-content{
+	background: var(--white);
+	padding: 2rem;
+	border-radius: 8px;
+}
+
+.tutorial-content h1,
+.tutorial-content h2{
+	color: var(--primary-dark);
+	margin-bottom: 1rem;
+}
+
+.tutorial-content article{
+	margin-bottom: 1rem;
+	text-align: justify;
+}
+
+pre{
+	background: #e9e9e9;
+	padding: 1rem;
+	border-radius: 6px;
+	overflow-x: auto;
+}
+
+#tut-assignment h2{
+	color: #1f1f1f;
+}
+
+#tut-assignment li{
+	margin: 1.5rem;
+}
+
+@media (max-width: 992px) {
+	.tutorial-layout{
+		grid-template-columns: 1fr;
+	}
+
+	.tutorial-sidebar{
+		position: relative;
+		top: 0;
 	}
 }
