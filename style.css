@@ -5,13 +5,8 @@
 	--white: #ffffff;
 	--text-dark: #1f1f1f;
 	--light-background: #908d8d8d;
-}
-
-:root {
 	--header-height: 80px;
 	--course-height: 50px;
-}
-:root {
 	--layout-padding: 1rem;
 }
 
@@ -497,8 +492,15 @@ pre {
 	transition: all 0.3s ease;
 }
 
-.social-link span:hover,
-.icon:hover {
+.social-link a:hover .icon,
+.social-link a:hover span {
+	color: #fff;
 	fill: #fff;
 	transform: scale(1.1);
+}
+
+
+a:focus{
+	outline: 2px solid var(--primary);
+	outline-offset: 3px;
 }
