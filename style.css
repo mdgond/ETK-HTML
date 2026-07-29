@@ -1,3 +1,4 @@
+
 :root {
 	--primary: #800000; /* Maroon */
 	--primary-light: #a00000;
@@ -504,3 +505,4 @@ a:focus{
 	outline: 2px solid var(--primary);
 	outline-offset: 3px;
 }
+

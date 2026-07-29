@@ -1,0 +1,428 @@
+:root {
+    --primary: #800000;
+    /* Maroon */
+    --primary-light: #a00000;
+    --primary-dark: #5c0000;
+    --white: #ffffff;
+    --text-dark: #1f1f1f;
+    --header-height: 80px;
+    --course-height: 50px;
+    --layout-padding: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+    line-height: 1.6;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Header & Navbar */
+header {
+    background-color: var(--primary);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-ETK {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.logo-ETK img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00f014;
+}
+
+.Login-buttons {
+    display: flex;
+    gap: 9px;
+}
+
+.Login-buttons button {
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.Login-buttons button:first-child {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.Login-buttons button:last-child {
+    background-color: #ffffff;
+    color: var(--primary);
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+/* Top Tech Bar */
+.course-bar {
+    background-color: #ffffff;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    overflow-x: auto;
+}
+
+.course-bar ul {
+    display: flex;
+    align-items: center;
+    min-width: max-content;
+    gap: 15px;
+}
+
+.course-bar li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.course-bar li:hover {
+    background-color: #ffffff;
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.15);
+    color: var(--primary);
+}
+
+.course-bar img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+}
+
+/* Main Body Layout */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+main h2 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: var(--primary);
+}
+
+/* Wireframe Banner Section */
+.wire-world-section {
+    grid-column: 1 / -1;
+    /* Spans full width */
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    gap: 20px;
+}
+
+.wire-world-text h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.wire-world-text p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.wire-world-section .btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.wire-world-section .btn:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.wire-world-logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
+}
+
+/* Browse Tech Section */
+.browse-tech {
+    grid-column: 1 / 2;
+}
+
+.tech-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.tech-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.tech-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.tech-card h3 {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Featured Tutorials */
+.tutorials {
+    grid-column: 2 / 3;
+}
+
+.tutorials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.tutorial-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.code-preview {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.75rem;
+    height: 90px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.tutorial-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.tutorial-card p {
+    font-size: 0.75rem;
+    color: #777;
+}
+
+progress {
+    width: 100%;
+    height: 6px;
+    margin-top: 8px;
+    accent-color: var(--primary);
+}
+
+/* Student Testimonials */
+.testimonials {
+    grid-column: 1 / -1;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 250px;
+    flex: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.testimonial-card h3 {
+    font-size: 1rem;
+    color: #111;
+}
+
+.testimonial-card p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Assignments */
+.assignments {
+    grid-column: 1 / -1;
+}
+
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.assignment-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.assignment-card .badge {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.assignment-card h3 {
+    font-size: 0.9rem;
+    margin: 8px 0;
+}
+
+.assignment-card p {
+    font-size: 0.75rem;
+    color: #555;
+}
+
+.assignment-card .card-footer {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Tech Stack Map */
+.tech-stack-map {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.map-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #111111;
+    color: #cccccc;
+    padding: 40px 30px 15px 30px;
+    margin-top: 40px;
+}
+
+.footer-columns {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.footer-col address,
+.footer-col p,
+.footer-col li {
+    font-size: 0.85rem;
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.footer-col a:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #222222;
+    padding-top: 15px;
+    font-size: 0.8rem;
+    color: #777777;
+}
